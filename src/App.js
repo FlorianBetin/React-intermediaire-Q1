@@ -18,10 +18,8 @@ function App() {
   const [user, setUser] = useState(fakeUser);
 
   const getUser = () => {
-    // Send the request
     axios
       .get('https://randomuser.me/api?nat=fr')
-      // Use this data to update the state
       .then((response) => {
         console.log(response.data);
         setUser(response.data.results[0]);
